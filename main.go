@@ -22,7 +22,7 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
         //query := u.Query()
 	//s := fmt.Sprintf("%v\n",request.MultiValueQueryStringParameters)
 	
-	dgit, _ := getupc(request.MultiValueQueryStringParameters["utid"])
+	dgit, _ := getupc(request.MultiValueQueryStringParameters["utid"][0])
 	
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
