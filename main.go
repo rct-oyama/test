@@ -10,7 +10,7 @@ import (
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	//u, _ := url.Parse("https://xxx.com?a=AAA&b=BBB&c=CCC&d=DDD")
         //query := u.Query()
-	s := fmt.Printf(request.MultiValueQueryStringParameters)
+	s := fmt.Printf("%v\n",request.MultiValueQueryStringParameters)
 
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
