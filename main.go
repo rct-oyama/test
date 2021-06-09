@@ -2,6 +2,9 @@ package main
 
 import (
         "fmt"
+	"strconv"
+	"errors"
+
         //"math/rand"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
