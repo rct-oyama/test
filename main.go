@@ -8,12 +8,12 @@ import (
 )
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	v := rand.Intn(6) + 1
-	s := fmt.Sprintf("サイコロの目は、%d", v)
+	//u, _ := url.Parse("https://xxx.com?a=AAA&b=BBB&c=CCC&d=DDD")
+        //query := u.Query()
 
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body: s,
+		Body: request,
 	}, nil
 }
 
