@@ -1,7 +1,7 @@
 package main
 
 import (
-        //"fmt"
+        "fmt"
         //"math/rand"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
@@ -13,7 +13,7 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body: request.MultiValueQueryStringParameters,
+		Body: fmt.Println(request.MultiValueQueryStringParameters),
 	}, nil
 }
 
