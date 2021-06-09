@@ -14,6 +14,7 @@ func getupc(seed string) (string, error) {
 	if err != nil {
 		return "error",errors.New("failed to generate check digit")
 	}
+	ok := p.Verify(seed + strconv.Itoa(cd))
 	return fmt.Sprintf("seed: %s, check digit: %d, verify: %t\n", seed, cd, ok),nil
 }
 
