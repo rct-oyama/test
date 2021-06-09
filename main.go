@@ -12,7 +12,7 @@ func getupc(seed string) (string, error) {
 	p := checkdigit.NewUPC()
 	cd, err := p.Generate(seed)
 	if err != nil {
-		return 0,errors.New("failed to generate check digit")
+		return "error",errors.New("failed to generate check digit")
 	}
 	return fmt.Sprintf("seed: %s, check digit: %d, verify: %t\n", seed, cd, ok),nil
 }
